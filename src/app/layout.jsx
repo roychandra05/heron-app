@@ -14,8 +14,21 @@ export const metadata = {
   title: "Heron Fit",
   description: "Heron Fit App",
   icons: {
-    icon: "/images/heron-logo.jpg"
-  }
+    icon: [
+      {
+        url: "/favicon-heron/favicon-32x32.png",
+        sizes: "32x32",
+        type: "image/png",
+      },
+      {
+        url: "/favicon-heron/favicon-16x16.png",
+        sizes: "16x16",
+        type: "image/png",
+      },
+    ],
+    apple: "/favicon-heron/apple-touch-icon.png",
+  },
+  manifest: "/favicon-heron/site.webmanifest",
 };
 
 export default function RootLayout({ children }) {
