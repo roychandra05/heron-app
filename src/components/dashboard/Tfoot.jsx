@@ -11,7 +11,6 @@ const Tfoot = ({
   setLimit,
   sortData,
 }) => {
-  console.info({ limit, sortData });
   return (
     <tfoot className="">
       <tr className="">

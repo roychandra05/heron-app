@@ -14,6 +14,7 @@ const montserrat = Montserrat({
 const ResetPassword = () => {
   const searchParams = useSearchParams();
   const token = searchParams.get("token");
+  console.info(token);
 
   const [state, formAction, isPending] = useActionState(resetPassword, {
     password: "",
@@ -31,6 +32,15 @@ const ResetPassword = () => {
       return () => clearTimeout(redirectToHomePage);
     }
   }, [state?.invalid]);
+
+  useEffect(() => {
+    if (!token) {
+      router.push("/");
+    }
+    return () => {
+      null;
+    };
+  }, []);
 
   return (
     <div

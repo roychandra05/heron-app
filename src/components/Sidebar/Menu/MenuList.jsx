@@ -27,7 +27,7 @@ const MenuList = () => {
   const logout = async () => {
     await signout();
     setUser((prev) => (prev = {}));
-    router.push("/signin");
+    return router.push("/signin");
   };
 
   return (
@@ -65,7 +65,7 @@ const MenuList = () => {
         {user?.id && (
           <div className="underline underline-offset-4 text-center flex justify-center items-center gap-2">
             <div className="">{user?.username}</div>
-            <User size={20}  color="#f2f2f2" weight="fill" />
+            <User size={20} color="#f2f2f2" weight="fill" />
           </div>
         )}
         <Link
@@ -74,7 +74,7 @@ const MenuList = () => {
         >
           <div className="flex gap-2 items-center justify-center">
             <div>Home</div>
-            <House size={20}  color="#f2f2f2" weight="fill" />
+            <House size={20} color="#f2f2f2" weight="fill" />
           </div>
           <div className="w-0 bg-white h-[1px] group-hover/home:w-full transition-all duration-300" />
         </Link>
@@ -100,7 +100,7 @@ const MenuList = () => {
                 <div className="absolute -bottom-1 -right-2 bg-red-600 rounded-full text-center flex items-center justify-center w-1/4 h-1/2 text-xs">
                   {notif.length}
                 </div>
-                <Users size={20}  color="#f2f2f2" weight="fill" />
+                <Users size={20} color="#f2f2f2" weight="fill" />
               </div>
               <div className="w-0 bg-white h-[1px] group-hover/users:w-full transition-all duration-300" />
             </Link>
@@ -112,7 +112,7 @@ const MenuList = () => {
         >
           <div className="flex gap-2 items-center justify-center">
             <div>BMI</div>
-            <Person size={20}  color="#f2f2f2" weight="fill" />
+            <Person size={20} color="#f2f2f2" weight="fill" />
           </div>
           <div className="w-0 bg-white h-[1px] group-hover/bmi:w-full transition-all duration-300" />
         </Link>
@@ -123,7 +123,7 @@ const MenuList = () => {
           >
             <div className="flex gap-2 items-center justify-center">
               <div>SIGN OUT</div>
-              <SignOut size={20}  color="#f2f2f2" weight="fill"  />
+              <SignOut size={20} color="#f2f2f2" weight="fill" />
             </div>
             <div className="w-0 bg-white h-[1px] group-hover/signout:w-full transition-all duration-300" />
           </button>

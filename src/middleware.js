@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
+import {  NextResponse } from "next/server";
 import { decrypt, verifySession } from "@/lib/session";
 import { cookies } from "next/headers";
 
@@ -23,16 +23,10 @@ export default async function middleware(req) {
 
   const accessToken = await decrypt(accessTokenCookie);
   const refreshToken = await decrypt(refreshTokenCookie);
-  const resetTokenPassword = NextRequest.nextUrl;
 
   //token validation and refresh token
   if (allRoutes.includes(path) || dynamicPath) {
     await verifySession();
-  }
-
-  // validation token reset password
-  if (!resetTokenPassword && resetPasswordRoutes.includes(path)) {
-    return NextResponse.redirect(new URL("/", req.nextUrl));
   }
 
   // 5. redirect to signin/signup page if the user is not authenticated
