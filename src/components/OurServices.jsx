@@ -5,7 +5,7 @@ const OurServices = ({ services, children }) => {
         <div className="absolute -top-8 bg-main-background w-20 flex flex-col items-center justify-center">
           {children}
         </div>
-        <p>{services}</p>
+        <div>{services}</div>
       </div>
     </div>
   );

@@ -46,7 +46,8 @@ const Tbody = ({
                     setRowEdit={setRowEdit}
                     user={user}
                     prevData={data}
-                    type={"edit"}
+                    type={"edit sales"}
+                    closeButton={true}
                   />
                 </div>
               </div>

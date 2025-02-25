@@ -22,21 +22,19 @@ const Equipment = () => {
 
   return (
     <section className="p-5 box-border">
-      <div className="flex flex-col items-center justify-center gap-14 rounded-xl p-5">
+      <div className="flex flex-col items-center justify-center gap-14 rounded-xl p-5 max-[640px]:px-0">
         <div className="flex items-center justify-center">
-          <h1 className="max-[640px]:text-lg text-2xl font-bold">
-            SPIRIT
-          </h1>
+          <h1 className="max-[640px]:text-lg text-2xl font-bold">SPIRIT</h1>
         </div>
-        <div className="flex flex-col gap-5">
-          <div className="grid grid-cols-4 gap-4 justify-center">
+        <div className="flex flex-col gap-5 max-[640px]:gap-2">
+          <div className="grid grid-cols-4 justify-center gap-4 max-[640px]:gap-2">
             <ImageItems imgs={imgs.slice(0, 4)} />
           </div>
-          <div className="flex justify-center items-center gap-4">
+          <div className="flex justify-center items-center gap-4 max-[640px]:gap-2">
             <ImageItems imgs={imgs.slice(4, 7)} />
           </div>
-          <div className="flex justify-center items-center">
-            <ImageItems imgs={imgs.slice(7,8)} />
+          <div className="flex justify-center items-center max-[640px]:gap-2">
+            <ImageItems imgs={imgs.slice(7, 8)} />
           </div>
         </div>
       </div>

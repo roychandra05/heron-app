@@ -76,7 +76,10 @@ const Navbar = ({ rightSide }) => {
         <BackNav />
       </div>
       <div className="flex items-center justify-center h-full w-auto ">
-        <Link href={"/"} className="max-[640px]:w-[3.9em] sm:max-lg:w-[4.5em] max-2xl:w-[4.5em] h-full relative ">
+        <Link
+          href={"/"}
+          className="max-[640px]:w-[3.9em] sm:max-lg:w-[4.5em] max-2xl:w-[4.5em] h-full relative "
+        >
           <Image
             src={heronLogo}
             fill
@@ -126,18 +129,10 @@ const Navbar = ({ rightSide }) => {
                   emoticon={<SignOut />}
                   text={"Sign Out"}
                 />
-                <Menu
-                  emoticon={<Users />}
-                  link={"/users"}
-                  text={"users"}
-                />
+                <Menu emoticon={<Users />} link={"/users"} text={"users"} />
               </div>
             ) : (
-              <Menu
-                emoticon={<SignIn />}
-                link={"/signin"}
-                text={"Sign In"}
-              />
+              <Menu emoticon={<SignIn />} link={"/signin"} text={"Sign In"} />
             )}
             {/* End isUsers */}
           </section>
@@ -147,7 +142,7 @@ const Navbar = ({ rightSide }) => {
           <div className="flex items-center justify-end max-[640px]:gap-2 gap-8">
             <div className="flex justify-center items-center  border px-2 py-1 rounded-md">
               {user ? user.username : ""}
-              <User/>
+              <User />
             </div>
             <button
               onClick={() => {
@@ -155,7 +150,7 @@ const Navbar = ({ rightSide }) => {
               }}
               className="relative"
             >
-              <Bell className="w-[25px] h-[25px]"/>
+              <Bell className="w-[25px] h-[25px]" />
               <div className="absolute -bottom-2 -right-2 bg-red-600 rounded-full text-center flex items-center justify-center w-3/4 h-3/4 text-xs">
                 {notif.length}
               </div>

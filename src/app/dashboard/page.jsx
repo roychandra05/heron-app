@@ -18,9 +18,9 @@ const Page = async () => {
     .eq("user_id", user?.userId);
   return (
     <section className="bg-main-black w-full h-auto relative">
-      <Navbar/>
-      <div className="grid max-[640px]:grid-cols-1 max-[640px]:grid-rows-3 gap-5 xl:max-2xl:grid-cols-2 h-full">
-        <InputFormSales type={"insert"} />
+      <Navbar />
+      <div className="grid max-xl:grid-cols-1 max-xl:grid-rows-3 max-xl:gap-16 gap-5 xl:max-2xl:grid-cols-2 h-full py-7">
+        <InputFormSales type={"Sales"} />
         <TableSales datas={data} />
         <LineChartData datas={data} />
       </div>

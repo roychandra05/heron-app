@@ -13,7 +13,13 @@ import useLoading from "@/hooks/useLoading";
 import { useUserSession } from "@/context/UserContext";
 import PopUpMessage from "../PopUpMessage";
 
-const InputFormSales = ({ prevData, type, setRowEdit, setIsLoadingUpdate }) => {
+const InputFormSales = ({
+  prevData,
+  type,
+  setRowEdit,
+  setIsLoadingUpdate,
+  closeButton,
+}) => {
   const { user } = useUserSession();
   const [isLoading, setIsLoading] = useLoading("4000");
   const [message, setMessage] = useState();
@@ -45,14 +51,22 @@ const InputFormSales = ({ prevData, type, setRowEdit, setIsLoadingUpdate }) => {
   };
 
   return (
-    <section className="px-2 w-full h-auto flex flex-col items-center justify-center">
+    <section className="px-2 w-full h-auto flex flex-col items-center justify-center relative">
       {message && isLoading && <PopUpMessage message={message} />}
+      {closeButton && (
+        <div className="absolute top-0 right-4 group/close">
+          <button onClick={() => setRowEdit([])} className="text-xl">
+            X
+          </button>
+          <div className="w-0 bg-white h-[2px] group-hover/close:w-full transition-all duration-300" />
+        </div>
+      )}
       <h1 className="font-bold text-xl">
         {type
           .split(" ")
           .map((val) => val[0].toUpperCase() + val.slice(1).toLowerCase())
           .join(" ")}{" "}
-        Data
+        Form
       </h1>
       <Form {...form}>
         <form
@@ -63,7 +77,7 @@ const InputFormSales = ({ prevData, type, setRowEdit, setIsLoadingUpdate }) => {
             control={form.control}
             name={"package"}
             render={({ field }) => (
-              <FormItem className="space-y-3 bg-main-base w-full p-2 text-main-background rounded-md">
+              <FormItem className="text-start space-y-3 bg-main-base w-full p-2 text-main-background rounded-md">
                 <FormLabel>Package</FormLabel>
                 <FormControl>
                   <RadioGroup
@@ -100,7 +114,7 @@ const InputFormSales = ({ prevData, type, setRowEdit, setIsLoadingUpdate }) => {
               </FormItem>
             )}
           />
-          <FormItem className="w-full">
+          <FormItem className="w-full text-start">
             <InputForm
               form={form}
               type={"number"}

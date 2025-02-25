@@ -7,7 +7,7 @@ const ImageItems = ({ imgs }) => {
         return (
           <div
             key={i}
-            className={`hover:translate-y-3 hover:shadow-none transition-all duration-300 rounded-full xl:max-2xl:w-48 xl:max-2xl:h-48 lg:max-xl:w-40 lg:max-xl:h-40 max-[640px]:w-16 max-[640px]:h-16 w-24 h-24 box-border overflow-hidden shadow-lg shadow-main-background`}
+            className={`hover:translate-y-3 hover:shadow-none transition-all duration-300 rounded-full sm:max-lg:w-40 sm:max-lg:h-40 xl:max-2xl:w-48 xl:max-2xl:h-48 lg:max-xl:w-40 lg:max-xl:h-40 max-[640px]:w-[5.3em] max-[640px]:h-[5.3em] w-24 h-24 box-border overflow-hidden shadow-lg shadow-main-background`}
           >
             <div className="relative w-full h-full">
               <Image

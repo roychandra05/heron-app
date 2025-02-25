@@ -1,9 +1,9 @@
 import Image from "next/image";
-import img from '../../public/images/img.jpg'
+import img from "../../public/images/img.jpg";
 
 const CompanyProfile = () => {
   return (
-    <section className="w-full max-[640px]:h-[70vh] h-[100vh]">
+    <section className="w-full max-[640px]:h-[70vh] h-[100vh] relative">
       <div className="w-full h-full relative">
         <Image
           src={img}
@@ -25,6 +25,7 @@ const CompanyProfile = () => {
           </p>
         </div>
       </div>
+      <div className="h-14 bg-[linear-gradient(180deg,_rgba(2,2,5,0.0),black_55%)] absolute -bottom-8 w-full" />
     </section>
   );
 };

@@ -45,7 +45,15 @@ export default function Home() {
               className="w-[50%] h-[50%]"
             />
           </OurServices>
-          <OurServices services={servicesData.operation}>
+          <OurServices
+            services={
+              <div>
+                {servicesData.operation.map((val) => {
+                  return <p>{val}</p>;
+                })}
+              </div>
+            }
+          >
             <ClockClockwise
               color="#fafafa"
               weight="duotone"

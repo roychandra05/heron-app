@@ -16,11 +16,11 @@ const SignOutAlert = ({ isSignOut, handleSignOut }) => {
     <div
       className={`${
         isSignOut ? "right-1/2 translate-x-1/2" : "-right-full translate-x-1/2"
-      } translate-y-1/2 bottom-1/2 transition-all duration-500 z-30 border-2 p-4 border-white fixed bg-main-background w-1/3 h-1/3`}
+      } translate-y-1/2 bottom-1/2 transition-all duration-500 z-30 border-2 p-4 border-white fixed bg-main-background max-lg:w-3/4 lg:w-1/2 xl:w-1/3 h-1/3`}
     >
       <div className="flex flex-col justify-center gap-5 w-full h-full items-center text-lg">
-        <div className="text-center w-1/2">Are you sure to signout?</div>
-        <div className="flex justify-around items-center w-1/2">
+        <div className="text-center w-1/2 max-[640px]:w-full">Are you sure to signout?</div>
+        <div className="flex justify-around items-center w-3/4">
           <button
             onClick={handleSignOut}
             className="border rounded-md px-4 py-1 hover:bg-main-base hover:text-main-background transition-all duration-300"

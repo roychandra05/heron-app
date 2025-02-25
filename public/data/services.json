@@ -3,8 +3,9 @@
       "Our gym is equipped with state-of-the-art fitness equipment designed to enhance your workout experience.We have everything you need to reach your full potential. We regularly maintain and upgrade our equipment to ensure you always have the best tools at your disposal.",
     "trainer":
       "We offer personalized fitness programs tailored to your goals, whether you're here to lose weight, build muscle, or improve your overall health. Our expert trainers are dedicated to guiding you every step of the way, ensuring you get the most out of your workout.",
-    "operation":
-      "Monday - Friday : 6 AM - 10 PM | Saturday - Sunday : 8 AM - 9 PM",
+    "operation": [
+     "Monday - Friday : 6 AM - 10 PM", "Saturday - Sunday : 8 AM - 9 PM"
+    ],
     "facilies":
       "Secure your belongings in our public lockers, park easily in our spacious parking area, and refresh yourself in our clean, modern shower facilities – all designed to make your fitness journey as seamless as possible."
   }

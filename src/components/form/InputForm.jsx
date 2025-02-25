@@ -8,7 +8,7 @@ const InputForm = ({
   type,
   isError,
   errorMessage,
-  placeHolder
+  placeHolder,
 }) => {
   return (
     <div>
@@ -17,7 +17,7 @@ const InputForm = ({
         name={name}
         render={({ field }) => (
           <FormItem>
-            <FormLabel>{label}</FormLabel>
+            <FormLabel className={""}>{label}</FormLabel>
             <FormControl>
               <Input
                 className={`${isError && "border-red-700"} border-2`}
