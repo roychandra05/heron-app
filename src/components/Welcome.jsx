@@ -2,8 +2,8 @@ import { Building } from "@phosphor-icons/react/dist/ssr";
 
 const Welcome = () => {
   return (
-    <section className="w-full box-border h-[60vh] sm:max-xl:h-[50vh] max-[640px]:h-[30vh] p-5">
-      <div className="flex flex-col items-center justify-center border rounded-xl w-full h-full max-[640px]:p-0 p-5">
+    <section className="w-full box-border h-auto p-5">
+      <div className="flex flex-col items-center justify-center border rounded-xl w-full h-auto max-[640px]:p-2 p-5">
         <div>
           <Building color="#fff" weight="duotone" className="w-16 h-16" />
         </div>

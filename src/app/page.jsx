@@ -48,8 +48,8 @@ export default function Home() {
           <OurServices
             services={
               <div>
-                {servicesData.operation.map((val) => {
-                  return <p>{val}</p>;
+                {servicesData.operation.map((val, i) => {
+                  return <p key={i}>{val}</p>;
                 })}
               </div>
             }
