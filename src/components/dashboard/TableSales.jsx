@@ -150,7 +150,7 @@ const TableSales = ({ datas }) => {
           </button>
         </div>
       </div>
-      <table className="w-full max-[640px]:text-[.5rem] sm:text-base md:text-base lg:text-base xl:text-base 2xl:text-base ">
+      <table className="w-full max-[640px]:text-[.6em] sm:text-base md:text-base lg:text-base xl:text-base 2xl:text-base ">
         <Thead
           col1={"PACKAGE"}
           col2={"PRICE"}

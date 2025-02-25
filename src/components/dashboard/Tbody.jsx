@@ -13,7 +13,7 @@ const Tbody = ({
   checkedBoxRow,
 }) => {
   return (
-    <tbody className="border-b-2">
+    <tbody className="border-b-2 ">
       <tr className="text-center">
         <td className="">
           <p> {data.package}</p>
